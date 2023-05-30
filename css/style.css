@@ -1,0 +1,26 @@
+body{
+	font-family: 'Segoe UI';
+}
+
+/* header */
+
+.bg-header{
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+.logo{
+    height: 70px;
+    width: 70px;
+}
+.icon{
+    height: 35px;
+    width: 35px;
+}
+.btn-header{
+    text-align: center;
+}
+
+/* footer  */
+.social-footer{
+    display: inline-block;
+}
