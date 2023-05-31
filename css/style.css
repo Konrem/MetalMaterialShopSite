@@ -1,5 +1,6 @@
 body{
 	font-family: 'Segoe UI';
+    background-color: rgba(0,0,0,0.05);
 }
 
 /* header */
@@ -20,12 +21,33 @@ body{
     text-align: center;
 }
 
-
+/* card-quetions */
+.card-questions{
+    border: 0;
+}
 
 /* card */
 .img-card{
     max-width: 300px;
     max-height: 300px;
+}
+.accordion-question{
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after{
+    background-image: url(../bootstrap-icons-1.10.5/plus-circle.svg);
+
+}
+.accordion-button:not(.collapsed){
+    background-color: rgba(255, 255, 255, 1);
+}
+.accordion-button:focus{
+    border-color: rgba(255, 255, 255, 1);
+    color: rgba(0,0,0,1);
 }
 
 /* footer  */
