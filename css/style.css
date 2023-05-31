@@ -28,8 +28,8 @@ body{
 
 /* card */
 .img-card{
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 270px;
+    max-height: 270px;
 }
 .accordion-question{
     border-radius: 20px;
