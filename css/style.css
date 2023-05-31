@@ -20,6 +20,14 @@ body{
     text-align: center;
 }
 
+
+
+/* card */
+.img-card{
+    max-width: 300px;
+    max-height: 300px;
+}
+
 /* footer  */
 .social-footer{
     display: inline-block;
