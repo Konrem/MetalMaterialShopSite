@@ -1,6 +1,6 @@
 body{
 	font-family: 'Segoe UI';
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.1);
 }
 
 /* header */
@@ -20,6 +20,35 @@ body{
 .btn-header{
     text-align: center;
 }
+
+/* block */
+.block-1{
+    background: url(../img/banner.jpg) no-repeat center center fixed;
+}
+.text-caption{
+    font-size: 65px;
+    font-weight: 700;
+}
+.know-more{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.my {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+
 
 /* card-quetions */
 .card-questions{
