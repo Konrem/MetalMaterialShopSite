@@ -194,6 +194,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* footer  */
+footer{
+    background-color: rgba(255, 255, 255, 1);
+}
 .social-footer {
     display: inline-block;
 }
