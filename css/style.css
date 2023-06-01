@@ -1,85 +1,199 @@
-body{
-	font-family: 'Segoe UI';
-    background-color: rgba(0,0,0,0.1);
+body {
+    font-family: 'Segoe UI';
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* header */
 
-.bg-header{
+.bg-header {
     background: url(../img/bg.jpg) no-repeat center center fixed;
     background-size: 100% 100%;
 }
-.logo{
+
+.logo {
     height: 70px;
     width: 70px;
 }
-.icon{
+
+.icon {
     height: 35px;
     width: 35px;
 }
-.btn-header{
+
+.btn-header {
     text-align: center;
 }
 
+.dropdown {
+    position: static;
+}
+
+li:hover>ul.drop-menu li {
+    display: flex;
+    width: 25%;
+    position: relative;
+}
+
+li:hover>ul.drop-menu li:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+    width: 90%;
+}
+
+
+
+/* navbar */
+.navbar-full {
+    position: relative;
+    width: 100%;
+    font-family: 'ProximaNova', sans-serif;
+    font-size: 15px;
+    color: #373737;
+    line-height: 1.5;
+}
+
+.dropdown:hover,
+.dropdown-menu:hover > .dropdown{
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: rgba(251, 169, 25, 1);
+}
+.dropdown:hover > .nav-link,
+.dropdown-menu:hover > .nav-link{
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.dropdown-menu {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-top: 4px solid rgba(251, 169, 25, 1);
+    border-radius: 0;
+    padding: 0;
+    left: 0;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dropdown-menu li .dropdown-item {
+    color: rgba(55, 55, 55, 1);
+    font-size: 1em;
+    padding: 0.5em 1em;
+}
+
+
+.drop-menu li {
+    display: flex;
+    width: 25%;
+    position: relative;
+}
+ul.drop-menu li:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(217, 217, 217, 1);
+    width: 90%;
+}
+.dropdown-menu li .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+@media only screen and (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .dropdown-menu.show {
+        flex-wrap: wrap;
+        max-height: 350px;
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1140px) {
+    .dropdown:hover .dropdown-menu {
+        width: 40vw;
+        flex-wrap: wrap;
+    }
+}
+
+
+
 /* block */
-.block-1{
+.block-1 {
     background: url(../img/banner.jpg) no-repeat center center fixed;
 }
-.text-caption{
+
+.text-caption {
     font-size: 65px;
     font-weight: 700;
 }
-.know-more{
+
+.know-more {
     background-color: rgba(255, 255, 255, 1);
 }
 
+/* file upload  */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
 }
-.my {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
+.file-upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
 
 
 /* card-quetions */
-.card-questions{
+.card-questions {
     border: 0;
 }
 
 /* card */
-.img-card{
+.img-card {
     max-width: 270px;
     max-height: 270px;
 }
-.accordion-question{
+
+.accordion-question {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 1);
 
 }
 
 .accordion-button::after,
-.accordion-button:not(.collapsed)::after{
+.accordion-button:not(.collapsed)::after {
     background-image: url(../bootstrap-icons-1.10.5/plus-circle.svg);
 
 }
-.accordion-button:not(.collapsed){
+
+.accordion-button:not(.collapsed) {
     background-color: rgba(255, 255, 255, 1);
 }
-.accordion-button:focus{
+
+.accordion-button:focus {
     border-color: rgba(255, 255, 255, 1);
-    color: rgba(0,0,0,1);
+    color: rgba(0, 0, 0, 1);
 }
 
 /* footer  */
-.social-footer{
+.social-footer {
     display: inline-block;
 }
