@@ -239,6 +239,10 @@ input::-webkit-inner-spin-button {
     border-color: rgba(255, 255, 255, 1);
     color: rgba(0, 0, 0, 1);
 }
+.apply-to{
+    display: inline-flex;
+}
+
 
 /* footer  */
 footer{
@@ -258,8 +262,8 @@ footer{
     position: relative;
     display: inline-block;
     transform: scale(var(--ggs,1));
-    width: 22px;
-    height: 22px
+    width: 24px;
+    height: 24px
 }
 .gg-arrow-right::after,
 .gg-arrow-right::before {
