@@ -284,13 +284,6 @@ input::-webkit-inner-spin-button {
     border: 6px solid rgba(74, 73, 75, 1);
 }
 
-.form-filter select {
-    width: auto;
-    border-radius: 8px;
-    border: 1px solid rgba(225, 177, 137, 1);
-    font-weight: 400;
-}
-
 .sidebar-catalog a:hover,
 .sidebar-catalog a:focus {
     background-color: transparent !important;
@@ -324,8 +317,24 @@ td {
 .link-catalog:hover {
     color: rgba(157, 72, 0, 1);
 }
-
-
+@media only screen and (max-width: 770px) {
+    .form-filter{
+        display: grid;
+    }
+    .form-filter select {
+        border-radius: 8px;
+        border: 1px solid rgba(225, 177, 137, 1);
+        font-weight: 400;
+    }
+}
+@media only screen and (min-width: 770px) {
+    .form-filter select {
+        width: auto;
+        border-radius: 8px;
+        border: 1px solid rgba(225, 177, 137, 1);
+        font-weight: 400;
+    }
+}
 
 /* card-quetions */
 .card-questions {
