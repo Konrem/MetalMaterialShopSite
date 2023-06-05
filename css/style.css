@@ -1,5 +1,5 @@
 body {
-        font-family: -apple-system, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -272,39 +272,50 @@ input::-webkit-inner-spin-button {
 .btn-toggle-nav a:focus {
     background-color: rgba(210, 244, 234, 1);
 }
-.sidebar-catalog{
+
+.sidebar-catalog {
     border: 6px solid rgba(74, 73, 75, 1);
 }
 
 .form-filter select {
     width: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(225, 177, 137, 1);
+    font-weight: 400;
 }
+
 .sidebar-catalog a:hover,
-.sidebar-catalog a:focus{
+.sidebar-catalog a:focus {
     background-color: transparent !important;
 }
-.btn-toggle:hover, 
-.btn-toggle:focus{
+
+.btn-toggle:hover,
+.btn-toggle:focus {
     background-color: transparent !important;
     color: rgba(157, 72, 0, 1);
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid rgba(0, 82, 123, 0.17);
     border-collapse: collapse;
     --bs-table-accent-bg: rgba(255, 255, 255, 1);
     --bs-table-striped-bg: rgb(245, 247, 250, 1);
 }
+
 .table>:not(:first-child) {
     border-top: 0;
 }
-.link-catalog{
-    color:rgba(157, 72, 0, 1);
+
+.link-catalog {
+    color: rgba(157, 72, 0, 1);
     font-weight: 600;
     text-decoration: none;
 }
-.link-catalog:hover{
-    color:rgba(157, 72, 0, 1); 
+
+.link-catalog:hover {
+    color: rgba(157, 72, 0, 1);
 }
 
 
