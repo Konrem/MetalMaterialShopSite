@@ -376,7 +376,7 @@ footer {
     position: relative;
     display: inline-block;
     transform: scale(var(--ggs, 1));
-    width: 24px;
+    width: 20px;
     height: 24px
 }
 
