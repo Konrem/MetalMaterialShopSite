@@ -496,7 +496,7 @@
                         </form>
                         <table class="table table-striped">
                             <thead>
-                                <tr>
+                                <tr class="d-none d-sm-table-row">
                                     <td class="col-9 fs-5 px-4 py-4">Назва</td>
                                     <td class="col-1 text-center fs-5 px-3 py-4">Розмір</td>
                                     <td class="col-1 text-center fs-5 px-3 py-4">Од.вим.</td>
@@ -505,28 +505,56 @@
                             </thead>
                             <tbody id="table-catalog">
                                 <tr>
-                                    <td class="col-9 px-3 py-2"><a href="#" class="link-catalog">Труба</a></td>
-                                    <td class="col-1 text-center px-3 py-2">12</td>
-                                    <td class="col-1 text-center px-3 py-2">метр</td>
-                                    <td class="col-1 text-center px-3 py-2">123</td>
+                                    <td class="col-9 px-3 py-2">
+                                        <a href="#" class="link-catalog">Труба</a>
+                                        <small class="d-block d-sm-none text-muted">
+                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">12</label>
+                                            <label class="fw-bold">, Од.вим. -</label><label class="fw-italic">метр</label>
+                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">123</label>
+                                        </small>
+                                    </td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">12</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">метр</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">123</td>
                                 </tr>
                                 <tr>
-                                    <td class="col-9 px-3 py-2"><a href="#" class="link-catalog">Лист</a></td>
-                                    <td class="col-1 text-center px-3 py-2">3</td>
-                                    <td class="col-1 text-center px-3 py-2">метр2</td>
-                                    <td class="col-1 text-center px-3 py-2">444</td>
+                                    <td class="col-9 px-3 py-2">
+                                        <a href="#" class="link-catalog">Лист</a>
+                                        <small class="d-block d-sm-none text-muted">
+                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">3</label>
+                                            <label class="fw-bold">, Од.вим. -</label><label class="fw-italic">метр2</label>
+                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">444</label>
+                                        </small>
+                                    </td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">3</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">метр2</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">444</td>
                                 </tr>
                                 <tr>
-                                    <td class="col-9 px-3 py-2"><a href="#" class="link-catalog">Арматура</a></td>
-                                    <td class="col-1 text-center px-3 py-2">45</td>
-                                    <td class="col-1 text-center px-3 py-2">метр</td>
-                                    <td class="col-1 text-center px-3 py-2">434</td>
+                                    <td class="col-9 px-3 py-2">
+                                        <a href="#" class="link-catalog">Арматура</a>
+                                        <small class="d-block d-sm-none text-muted">
+                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">45</label>
+                                            <label class="fw-bold">, Од.вим. -</label><label class="fw-italic">метр</label>
+                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">434</label>
+                                        </small>
+                                    </td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">45</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">метр</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">434</td>
                                 </tr>
                                 <tr>
-                                    <td class="col-9 px-3 py-2"><a href="#" class="link-catalog">Балка</a></td>
-                                    <td class="col-1 text-center px-3 py-2">55</td>
-                                    <td class="col-1 text-center px-3 py-2">-</td>
-                                    <td class="col-1 text-center px-3 py-2">66</td>
+                                    <td class="col-9 px-3 py-2">
+                                        <a href="#" class="link-catalog">Балка</a>
+                                        <small class="d-block d-sm-none text-muted">
+                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">55</label>
+                                            <label class="fw-bold">, Од.вим. -</label><label class="fw-italic">шт.</label>
+                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">66</label>
+                                        </small>                                    
+                                    </td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">55</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">шт.</td>
+                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">66</td>
                                 </tr>
                             </tbody>
                         </table>
