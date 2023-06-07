@@ -197,7 +197,6 @@ input::-webkit-inner-spin-button {
     z-index: -1;
     display: block;
     width: auto;
-
 }
 
 .img-category:hover {
@@ -219,7 +218,29 @@ input::-webkit-inner-spin-button {
 .img-category:hover>.text-img {
     color: rgba(0, 0, 0, 1);
 }
-
+@media only screen and (max-width: 768px) {
+    .img-category {
+        min-height: 200px;
+    }
+    .img-category img{
+        height: 100%;
+    }
+    .text-img{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .img-category {
+        min-height: 150px;
+    }
+    .text-img{
+        font-size: 18px;
+        top: 50%;
+        bottom: 50%;
+        text-align: center;
+        margin: auto;
+    }
+}
 /* catalog */
 .bi {
     vertical-align: -.125em;
