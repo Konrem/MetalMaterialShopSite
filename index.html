@@ -482,29 +482,27 @@
                         <form action="#" class="form-filter">
                             <div class="select-filter d-block d-md-inline-block ">
                                 <div class="fw-6">Марка</div>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>-- Виберіть марку --</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select id="select-mark" class="form-select" aria-label="Default select example">
+                                    <option value="null" selected>-- Виберіть марку --</option>
                                 </select>
                             </div>
                             <div class="select-filter d-block d-md-inline-block ">
                                 <div class="fa-6">Модель</div>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>-- Виберіть розмір--</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select id="select-size" class="form-select" aria-label="Default select example">
+                                    <option value="null" selected>-- Виберіть розмір--</option>
                                 </select>
                             </div>
                             <button class="btn btn-warning d-block d-md-inline-block  fw-bold mt-3 mt-md-0 mb-1"
-                                id="applyFilter">Застосувати</button>
+                                id="applyFilter"
+                                onclick="filter(document.querySelector('#select-mark'),document.querySelector('#select-size'))">Застосувати</button>
                             <button class="btn btn-danger d-block d-md-inline-block  fw-bold mt-3 mt-md-0 mb-1"
-                                id="castFilter">Скинути</button>
+                                id="castFilter" onclick="reset()">Скинути</button>
                         </form>
+                        <!-- <div id="table-catalog">
+
+                        </div>  -->
                         <table class="table table-striped">
-                            <thead>
+                            <thead id="thead">
                                 <tr class="d-none d-sm-table-row">
                                     <td class="col-9 fs-5 px-4 py-4">Назва</td>
                                     <td class="col-1 text-center fs-5 px-3 py-4">Розмір</td>
@@ -512,63 +510,8 @@
                                     <td class="col-1 text-center fs-5 px-3 py-4">Ціна</td>
                                 </tr>
                             </thead>
-                            <tbody id="table-catalog">
-                                <tr>
-                                    <td class="col-9 px-3 py-2">
-                                        <a href="#" class="link-catalog">Труба</a>
-                                        <small class="d-block d-sm-none text-muted">
-                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">12</label>
-                                            <label class="fw-bold">, Од.вим. -</label><label
-                                                class="fw-italic">метр</label>
-                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">123</label>
-                                        </small>
-                                    </td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">12</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">метр</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">123</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-9 px-3 py-2">
-                                        <a href="#" class="link-catalog">Лист</a>
-                                        <small class="d-block d-sm-none text-muted">
-                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">3</label>
-                                            <label class="fw-bold">, Од.вим. -</label><label
-                                                class="fw-italic">метр2</label>
-                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">444</label>
-                                        </small>
-                                    </td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">3</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">метр2</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">444</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-9 px-3 py-2">
-                                        <a href="#" class="link-catalog">Арматура</a>
-                                        <small class="d-block d-sm-none text-muted">
-                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">45</label>
-                                            <label class="fw-bold">, Од.вим. -</label><label
-                                                class="fw-italic">метр</label>
-                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">434</label>
-                                        </small>
-                                    </td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">45</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">метр</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">434</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-9 px-3 py-2">
-                                        <a href="#" class="link-catalog">Балка</a>
-                                        <small class="d-block d-sm-none text-muted">
-                                            <label class="fw-bold">Розмір -</label><label class="fw-italic">55</label>
-                                            <label class="fw-bold">, Од.вим. -</label><label
-                                                class="fw-italic">шт.</label>
-                                            <label class="fw-bold">, Ціна -</label><label class="fw-italic">66</label>
-                                        </small>
-                                    </td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">55</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">шт.</td>
-                                    <td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">66</td>
-                                </tr>
+                            <tbody id="tbody">
+
                             </tbody>
                         </table>
                     </div>
@@ -654,8 +597,7 @@
             <div class="container">
                 <div class="user-block">
                     <div class="user-img  scroll-target">
-                        <div class="item-img"> <img
-                                src="img/user.jpg" />
+                        <div class="item-img"> <img src="img/user.jpg" />
                         </div>
                     </div>
                     <div class="user-info-block">
@@ -672,21 +614,23 @@
                         </ul>
 
                         <div class="user-description user-document">
-                            <div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Ukrainian_passport_2017.jpg"></div>
+                            <div class="icon"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/81/Ukrainian_passport_2017.jpg">
+                            </div>
                             <div class="text ms-1">
                                 <div class="title">Документи перевірені</div>
                                 <div class="description">Паспорт, диплом про освіту</div>
                             </div>
                         </div>
                         <div class="user-description user-audio mt-2">
-                            <div class="icon" >
+                            <div class="icon">
                                 <a onclick="playPauseAudio()" id="play" class="d-block">
-                                    <img src="bootstrap-icons-1.10.5/play-circle.svg"   width="32" height="32">
+                                    <img src="bootstrap-icons-1.10.5/play-circle.svg" width="32" height="32">
                                 </a>
                                 <a onclick="playPauseAudio()" id="pause" class="d-none">
                                     <img src="bootstrap-icons-1.10.5/pause-circle-fill.svg" width="32" height="32">
                                 </a>
-                                
+
                             </div>
                             <div class="text ms-1">
                                 <div class="title">Підключення безкоштовне</div>
@@ -695,8 +639,8 @@
                         </div>
                         <a name="personal-form"></a>
                         <div class="user-action">
-                            <a href="#" class="user-action-link link-yellow js-button"
-                                >Звернутися до спеціаліста &rarr;</a>
+                            <a href="#" class="user-action-link link-yellow js-button">Звернутися до спеціаліста
+                                &rarr;</a>
                         </div>
                     </div>
                 </div>
