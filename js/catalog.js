@@ -1,4 +1,4 @@
-var jsonData = [
+var catalogInTable = [
     {
         name: "Saurabh",
         mark: "8н6",

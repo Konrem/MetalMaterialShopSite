@@ -36,23 +36,23 @@ function playPauseAudio() {
 
 
 $(document).ready(function () {
-    writeSelect(uniqMark(jsonData), "#select-mark", 1);
-    writeSelect(uniqSize(jsonData), "#select-size", 2);
-    writeTable(jsonData);
+    writeSelect(uniqMark(catalogInTable), "#select-mark", 1);
+    writeSelect(uniqSize(catalogInTable), "#select-size", 2);
+    writeTable(catalogInTable);
 })
 
-function uniqMark(sel){
-    
+function uniqMark(sel) {
+
     let seen = {};
-    return sel.filter(function(item) {
+    return sel.filter(function (item) {
         return seen.hasOwnProperty(item.mark) ? false : (seen[item.mark] = true);
     });
 }
 
-function uniqSize(sel){
-    
+function uniqSize(sel) {
+
     let seen = {};
-    return sel.filter(function(item) {
+    return sel.filter(function (item) {
         return seen.hasOwnProperty(item.size) ? false : (seen[item.size] = true);
     });
 }
@@ -112,7 +112,7 @@ function filter(markFilter, sizeFilter) {
 
     let tbody_container = $('#tbody');
 
-    let filterArray = jsonData.filter(function (arr) {
+    let filterArray = catalogInTable.filter(function (arr) {
         if (markFilter.options[markFilter.selectedIndex].value === 'null') {
             if (sizeFilter.options[sizeFilter.selectedIndex].value !== 'null') {
                 return arr.size == sizeFilter.options[sizeFilter.selectedIndex].value;
@@ -133,8 +133,8 @@ function filter(markFilter, sizeFilter) {
 }
 
 function resetTable() {
-    console.log(jsonData);
+    console.log(catalogInTable);
     $('#tbody').empty();
-    writeTable(jsonData);
-    
+    writeTable(catalogInTable);
+
 }
