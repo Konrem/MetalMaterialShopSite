@@ -35,8 +35,6 @@ function playPauseAudio() {
 }
 
 
-
-
 $(document).ready(function () {
     writeSelect(uniqMark(jsonData), "#select-mark", 1);
     writeSelect(uniqSize(jsonData), "#select-size", 2);
@@ -49,7 +47,7 @@ function uniqMark(sel){
     return sel.filter(function(item) {
         return seen.hasOwnProperty(item.mark) ? false : (seen[item.mark] = true);
     });
-};
+}
 
 function uniqSize(sel){
     
@@ -57,7 +55,7 @@ function uniqSize(sel){
     return sel.filter(function(item) {
         return seen.hasOwnProperty(item.size) ? false : (seen[item.size] = true);
     });
-};
+}
 
 
 function writeSelect(table, select, numbType) {
@@ -76,7 +74,7 @@ function writeSelect(table, select, numbType) {
             }
         });
     });
-};
+}
 
 function writeTable(table) {
     let tbody_container = $('#tbody');
@@ -134,8 +132,9 @@ function filter(markFilter, sizeFilter) {
     writeTable(filterArray);
 }
 
-function reset() {
+function resetTable() {
+    console.log(jsonData);
     $('#tbody').empty();
     writeTable(jsonData);
+    
 }
-

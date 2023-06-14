@@ -1,4 +1,4 @@
-let jsonData = [
+var jsonData = [
     {
         name: "Saurabh",
         mark: "8н6",
