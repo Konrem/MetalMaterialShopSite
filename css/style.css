@@ -354,6 +354,10 @@ td {
     color: rgba(157, 72, 0, 1);
 }
 
+.underline-subtitle{
+    border-bottom: 1px solid rgba(55, 55, 55, 0.35);
+}
+
 @media only screen and (max-width: 770px) {
     .form-filter {
         display: grid;
