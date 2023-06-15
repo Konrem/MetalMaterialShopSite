@@ -119,6 +119,15 @@ function writeTable(table) {
         tbody_container.append(tr);
     });
 }
+function emptyTable() {
+    let tbody_container = $('#tbody');
+    let tr, th;
+    tr = $('<tr>');
+    th = $('<td class="col-12 text-center px-3 py-2" colspan="4">');
+    th.text("За вашим запитом продукції не знайдено.");
+    tr.append(th);
+    tbody_container.append(tr);
+}
 
 function filter() {
 
@@ -144,7 +153,11 @@ function filter() {
         }
     });
     $('#tbody').empty();
-    writeTable(filterArray);
+    if (Object.keys(filterArray)[0] == undefined) {
+        emptyTable();
+    } else {
+        writeTable(filterArray);
+    }
 }
 
 function resetTable() {
@@ -168,7 +181,12 @@ function newTable(newTableName, teg) {
     $('#select-size').empty();
     writeSelect(uniqMark(catalogInTable), "#select-mark", 2);
     writeSelect(uniqSize(catalogInTable), "#select-size", 3);
-    writeTable(catalogInTable);
+    if (Object.keys(catalogInTable)[0] == undefined) {
+        emptyTable();
+
+    } else {
+        writeTable(catalogInTable);
+    }
 
     $('.sidebar-catalog a').removeClass('active');
     $(teg).addClass('active');
