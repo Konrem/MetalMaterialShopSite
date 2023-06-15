@@ -295,7 +295,7 @@
         <section class="cards-category">
             <div class="container">
                 <div class="row">
-                    <h3 class="my-4 px-3">Продукты</h3>
+                    <h3 class="my-4 px-3">Продукція</h3>
                     <div class="col-6 my-3 my-lg-0 col-lg-3">
                         <a href="#" class="img-category">
                             <img src="img/product1.png" alt="">
@@ -338,13 +338,13 @@
                     <div class="col-6 my-3 my-lg-0 col-lg-3">
                         <a href="#" class="img-category">
                             <img src="img/product7.png" alt="">
-                            <p class="text-img">Уголок<i class="gg-arrow-right d-none d-md-inline-block"></i></p>
+                            <p class="text-img">Куточки<i class="gg-arrow-right d-none d-md-inline-block"></i></p>
                         </a>
                     </div>
                     <div class="col-6 my-3 my-lg-0 col-lg-3">
                         <a href="#" class="img-category">
                             <img src="img/product8.png" alt="">
-                            <p class="text-img">Сетка<i class="gg-arrow-right d-none d-md-inline-block"></i></p>
+                            <p class="text-img">Сітка<i class="gg-arrow-right d-none d-md-inline-block"></i></p>
                         </a>
                     </div>
                 </div>
@@ -358,119 +358,103 @@
                         <div class="flex-shrink-0 sidebar-catalog p-3 bg-white fs-5">
                             <ul class="list-unstyled ps-0">
                                 <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
-                                        data-bs-toggle="collapse" data-bs-target="#armature-collapse"
-                                        aria-expanded="true">
-                                        Арматура
-                                    </button>
-                                    <div class="collapse show" id="armature-collapse">
-                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">Overview</a></li>
-                                            <li><a href="#" class="link-dark rounded">Updates</a></li>
-                                            <li><a href="#" class="link-dark rounded">Reports</a></li>
-                                        </ul>
-                                    </div>
+                                    <span class="fs-4 fw-bold"> Нержавіюча сталь</span>
+                                </li>
+                                <li class="mb-1 fs-5 ms-3 ms-md-4">
+                                    <a id="tube" onclick="newTable(stainless, this)" data-type="Труба">Труба</a>
+                                </li>
+                                <li class="mb-1 fs-5 ms-3 ms-md-4">
+                                    <a onclick="newTable(stainless, this)" data-type="Лист">Лист</a>
+                                </li>
+                                <li class="mb-1 fs-5 ms-3 ms-md-4">
+                                    <a onclick="newTable(stainless, this)" data-type="Арматура">Арматура</a>
+                                </li>
+                                <li class="mb-1 fs-5 ms-3 ms-md-4">
+                                    <a onclick="newTable(stainless, this)" data-type="Балка">Балки</a>
+                                </li>
+                                <li class="mb-1 fs-5 ms-3 ms-md-4">
+                                    <a onclick="newTable(stainless, this)" data-type="Круг">Круг</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled ps-0">
+                                <li class="my-2">
+                                    <span class="fs-4 fw-bold">Кольорові метали</span>
                                 </li>
                                 <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
+                                    <a class="btn btn-toggle fs-5 align-items-center rounded collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#pipes-collapse"
                                         aria-expanded="false">
-                                        Труби
-                                    </button>
+                                        Мідь
+                                    </a>
                                     <div class="collapse" id="pipes-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">Overview</a></li>
-                                            <li><a href="#" class="link-dark rounded">Weekly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Monthly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Annually</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(copper, this)"
+                                                    data-type="Труба">Труба</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(copper, this)"
+                                                    data-type="Круг">Круг</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(copper, this)"
+                                                    data-type="Лист">Лист</a></li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
+                                    <a class="btn btn-toggle fs-5 align-items-center rounded collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#beam-collapse" aria-expanded="false">
-                                        Балка
-                                    </button>
+                                        Бронза
+                                    </a>
                                     <div class="collapse" id="beam-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">Overview</a></li>
-                                            <li><a href="#" class="link-dark rounded">Weekly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Monthly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Annually</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(bronze, this)"
+                                                    data-type="Круг">Круг</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(bronze, this)"
+                                                    data-type="Лист">Лист</a></li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
+                                    <a class="btn btn-toggle fs-5 align-items-center rounded collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#channel-collapse"
                                         aria-expanded="false">
-                                        Швелер
-                                    </button>
+                                        Латунь
+                                    </a>
                                     <div class="collapse" id="channel-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">Overview</a></li>
-                                            <li><a href="#" class="link-dark rounded">Weekly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Monthly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Annually</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(brass, this)"
+                                                    data-type="Круг">Круг</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(brass, this)"
+                                                    data-type="Шестигранник">Шестигранник</a></li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
+                                    <a class="btn btn-toggle fs-5 align-items-center rounded collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#flooring-collapse"
                                         aria-expanded="false">
-                                        Проофнастил
-                                    </button>
+                                        Алюміній
+                                    </a>
                                     <div class="collapse" id="flooring-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">Overview</a></li>
-                                            <li><a href="#" class="link-dark rounded">Weekly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Monthly</a></li>
-                                            <li><a href="#" class="link-dark rounded">Annually</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(aluminum, this)"
+                                                    data-type="Лист">Лист</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(aluminum, this)"
+                                                    data-type="Круг">Круг</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(aluminum, this)"
+                                                    data-type="Труба">Труба</a></li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
+                                    <a class="btn btn-toggle fs-5 align-items-center rounded collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#rental-collapse"
                                         aria-expanded="false">
-                                        Листовий прокат
-                                    </button>
+                                        Ніхром
+                                    </a>
                                     <div class="collapse" id="rental-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">New</a></li>
-                                            <li><a href="#" class="link-dark rounded">Processed</a></li>
-                                            <li><a href="#" class="link-dark rounded">Shipped</a></li>
-                                            <li><a href="#" class="link-dark rounded">Returned</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
-                                        data-bs-toggle="collapse" data-bs-target="#cornel-collapse"
-                                        aria-expanded="false">
-                                        Куточок
-                                    </button>
-                                    <div class="collapse" id="cornel-collapse">
-                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">New</a></li>
-                                            <li><a href="#" class="link-dark rounded">Processed</a></li>
-                                            <li><a href="#" class="link-dark rounded">Shipped</a></li>
-                                            <li><a href="#" class="link-dark rounded">Returned</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="mb-1">
-                                    <button class="btn btn-toggle fs-5 align-items-center rounded collapsed"
-                                        data-bs-toggle="collapse" data-bs-target="#net-collapse" aria-expanded="false">
-                                        Сітка
-                                    </button>
-                                    <div class="collapse" id="net-collapse">
-                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">New</a></li>
-                                            <li><a href="#" class="link-dark rounded">Processed</a></li>
-                                            <li><a href="#" class="link-dark rounded">Shipped</a></li>
-                                            <li><a href="#" class="link-dark rounded">Returned</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(nichrome, this)"
+                                                    data-type="Арматура">Арматура</a></li>
+                                            <li><a class="link-dark rounded" onclick="newTable(nichrome, this)"
+                                                    data-type="Дріт">Дріт</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -482,25 +466,19 @@
                         <form action="#" class="form-filter">
                             <div class="select-filter d-block d-md-inline-block ">
                                 <div class="fw-6">Марка</div>
-                                <select id="select-mark" class="form-select" aria-label="Default select example">
-                                    <option value="null" selected>-- Виберіть марку --</option>
+                                <select id="select-mark" class="form-select">
                                 </select>
                             </div>
                             <div class="select-filter d-block d-md-inline-block ">
                                 <div class="fa-6">Модель</div>
-                                <select id="select-size" class="form-select" aria-label="Default select example">
-                                    <option value="null" selected>-- Виберіть розмір--</option>
+                                <select id="select-size" class="form-select">
                                 </select>
                             </div>
                             <a class="btn btn-warning d-block d-md-inline-block  fw-bold mt-3 mt-md-0 mb-1"
-                                id="applyFilter"
-                                onclick="filter(document.querySelector('#select-mark'),document.querySelector('#select-size'))">Застосувати</a>
+                                id="applyFilter" onclick="filter()">Застосувати</a>
                             <a class="btn btn-danger d-block d-md-inline-block  fw-bold mt-3 mt-md-0 mb-1"
                                 id="castFilter" onclick="resetTable()">Скинути</a>
                         </form>
-                        <!-- <div id="table-catalog">
-
-                        </div>  -->
                         <table class="table table-striped">
                             <thead id="thead">
                                 <tr class="d-none d-sm-table-row">
@@ -725,7 +703,12 @@
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="text/javascript" src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/catalog.js"></script>
+    <script type="text/javascript" src="js/catalog/aluminum.js"></script>
+    <script type="text/javascript" src="js/catalog/brass.js"></script>
+    <script type="text/javascript" src="js/catalog/bronze.js"></script>
+    <script type="text/javascript" src="js/catalog/copper.js"></script>
+    <script type="text/javascript" src="js/catalog/nichrome.js"></script>
+    <script type="text/javascript" src="js/catalog/stainless.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 

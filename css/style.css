@@ -312,9 +312,17 @@ input::-webkit-inner-spin-button {
     border: 6px solid rgba(74, 73, 75, 1);
 }
 
+.sidebar-catalog a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .sidebar-catalog a:hover,
-.sidebar-catalog a:focus {
+.sidebar-catalog a:focus,
+.active {
     background-color: transparent !important;
+    color: rgb(209, 101, 6) !important;
+    text-decoration: none;
 }
 
 .btn-toggle:hover,

@@ -34,11 +34,13 @@ function playPauseAudio() {
     }, false);
 }
 
+var catalogInTable = [];
 
 $(document).ready(function () {
-    writeSelect(uniqMark(catalogInTable), "#select-mark", 1);
-    writeSelect(uniqSize(catalogInTable), "#select-size", 2);
-    writeTable(catalogInTable);
+    newTable(stainless, "#tube");
+    // writeSelect(uniqMark(catalogInTable), "#select-mark", 2);
+    // writeSelect(uniqSize(catalogInTable), "#select-size", 3);
+    // writeTable(catalogInTable);
 })
 
 function uniqMark(sel) {
@@ -62,10 +64,18 @@ function writeSelect(table, select, numbType) {
     let selectMark = $(select);
     let tr, th, a;
 
+    let option = $('<option value="null" selected>');
+    if (numbType === 1) {
+        option.text("-- Виберіть марку --");
+    } else {
+        option.text("-- Виберіть розмір --");
+    }
+    selectMark.append(option);
+
     $.each(table, function (i, item) {
-        tr = $('<tr>');
         let vals = Object.values(item);
         let fullName;
+
         $.each(vals, (i, elem) => {
             if (i == numbType) {
                 let option = $('<option value=' + elem + '>');
@@ -87,44 +97,49 @@ function writeTable(table) {
         let fullName;
 
         $.each(vals, (i, elem) => {
-            if (i < 2) {
-                if (i == 0) {
-                    th = $('<td class="col-9 px-3 py-2">');
-                    a = $('<a href="#" class="link-catalog">');
-                    fullName = elem + ', ';
+            if (i != 0) {
+                if (i < 3) {
+                    if (i == 1) {
+                        th = $('<td class="col-9 px-3 py-2">');
+                        a = $('<a href="#" class="link-catalog">');
+                        fullName = elem + ', ';
+                    } else {
+                        fullName += elem;
+                        a.text(fullName);
+                        th.append(a);
+                        tr.append(th);
+                    }
                 } else {
-                    fullName += elem;
-                    a.text(fullName);
-                    th.append(a);
+                    let th = $('<td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">');
+                    th.text(elem);
                     tr.append(th);
                 }
-            } else {
-                let th = $('<td class="col-1 text-center px-3 py-2 d-none d-sm-table-cell">');
-                th.text(elem);
-                tr.append(th);
             }
         });
         tbody_container.append(tr);
     });
 }
 
-function filter(markFilter, sizeFilter) {
+function filter() {
 
+    let markFilter = $('#select-mark').val();
+    let sizeFilter = $('#select-size').val();
     let tbody_container = $('#tbody');
 
+
     let filterArray = catalogInTable.filter(function (arr) {
-        if (markFilter.options[markFilter.selectedIndex].value === 'null') {
-            if (sizeFilter.options[sizeFilter.selectedIndex].value !== 'null') {
-                return arr.size == sizeFilter.options[sizeFilter.selectedIndex].value;
+        if (markFilter === 'null') {
+            if (sizeFilter !== 'null') {
+                return arr.size == sizeFilter;
             } else {
                 return arr;
             }
         } else {
-            if (sizeFilter.options[sizeFilter.selectedIndex].value === 'null') {
-                return arr.mark == markFilter.options[markFilter.selectedIndex].value;
+            if (sizeFilter === 'null') {
+                return arr.mark == markFilter;
 
             } else {
-                return ((arr.mark == markFilter.options[markFilter.selectedIndex].value) && (arr.size == sizeFilter.options[sizeFilter.selectedIndex].value));
+                return ((arr.mark == markFilter) && (arr.size == sizeFilter));
             }
         }
     });
@@ -133,8 +148,23 @@ function filter(markFilter, sizeFilter) {
 }
 
 function resetTable() {
-    console.log(catalogInTable);
+    $('#select-mark option').prop('selected', false);
+    $('#select-size option').prop('selected', false);
     $('#tbody').empty();
     writeTable(catalogInTable);
 
+}
+function newTable(newTableName, teg) {
+    catalogInTable = newTableName.filter(function (arr) {
+        if (arr.type === $(teg).attr('data-type')) return arr;
+    });
+    $('#tbody').empty();
+    $('#select-mark').empty();
+    $('#select-size').empty();
+    writeSelect(uniqMark(catalogInTable), "#select-mark", 2);
+    writeSelect(uniqSize(catalogInTable), "#select-size", 3);
+    writeTable(catalogInTable);
+
+    $('.sidebar-catalog a').removeClass('active');
+    $(teg).addClass('active');
 }
