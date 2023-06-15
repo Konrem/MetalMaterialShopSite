@@ -155,9 +155,14 @@ function resetTable() {
 
 }
 function newTable(newTableName, teg) {
-    catalogInTable = newTableName.filter(function (arr) {
-        if (arr.type === $(teg).attr('data-type')) return arr;
-    });
+    if ($(teg).attr('data-type') == "null") {
+        catalogInTable = newTableName;
+    } else {
+        catalogInTable = newTableName.filter(function (arr) {
+            if (arr.type == $(teg).attr('data-type')) return arr;
+        });
+    }
+
     $('#tbody').empty();
     $('#select-mark').empty();
     $('#select-size').empty();
