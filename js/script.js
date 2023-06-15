@@ -120,16 +120,6 @@ function writeTable(table) {
     });
 }
 
-function emptyTable() {
-    let tbody_container = $('#tbody');
-    let tr, th;
-    tr = $('<tr>');
-    th = $('<td colspan="4" class="col-12 text-center px-3 py-2">');
-    th.text("За такими параметрами продукції не знайдено.");
-    tr.append(th);
-    tbody_container.append(tr);
-}
-
 function filter() {
 
     let markFilter = $('#select-mark').val();
@@ -154,11 +144,7 @@ function filter() {
         }
     });
     $('#tbody').empty();
-    if (Object.keys(filterArray) == 0) {
-        emptyTable();
-    } else {
-        writeTable(filterArray);
-    }
+    writeTable(filterArray);
 }
 
 function resetTable() {
@@ -180,15 +166,9 @@ function newTable(newTableName, teg) {
     $('#tbody').empty();
     $('#select-mark').empty();
     $('#select-size').empty();
-
-    if (Object.keys(catalogInTable) == 0) {
-        emptyTable();
-    } else {
-        writeSelect(uniqMark(catalogInTable), "#select-mark", 2);
-        writeSelect(uniqSize(catalogInTable), "#select-size", 3);
-        writeTable(catalogInTable);
-
-    }
+    writeSelect(uniqMark(catalogInTable), "#select-mark", 2);
+    writeSelect(uniqSize(catalogInTable), "#select-size", 3);
+    writeTable(catalogInTable);
 
     $('.sidebar-catalog a').removeClass('active');
     $(teg).addClass('active');
