@@ -323,6 +323,7 @@ input::-webkit-inner-spin-button {
     background-color: transparent !important;
     color: rgb(209, 101, 6) !important;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-toggle:hover,
@@ -357,7 +358,9 @@ td {
 .underline-subtitle{
     border-bottom: 1px solid rgba(55, 55, 55, 0.35);
 }
-
+.form-filter select {
+    cursor: pointer;
+}
 @media only screen and (max-width: 770px) {
     .form-filter {
         display: grid;
@@ -519,6 +522,7 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .user-document .icon img {
