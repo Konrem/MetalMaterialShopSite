@@ -1,6 +1,6 @@
 var nichrome = [
     {
-        type: "Труба",
+        type: "Дріт",
         name: "Saurabh",
         mark: "8н6",
         size: "20",
@@ -8,7 +8,7 @@ var nichrome = [
         cost: 2345
     },
     {
-        type: "Круг",
+        type: "Дріт",
         name: "Saurab4345h",
         mark: "8нe6",
         size: "20",
@@ -16,7 +16,7 @@ var nichrome = [
         cost: 23645
     },
     {
-        type: "Лист",
+        type: "Дріт",
         name: "авпрпа",
         mark: "85н6",
         size: "2е0",
@@ -24,7 +24,7 @@ var nichrome = [
         cost: 2345
     },
     {
-        type: "Круг",
+        type: "Арматура",
         name: "Saurиатепратпамиabh",
         mark: "85н6",
         size: "240",
