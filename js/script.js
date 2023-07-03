@@ -4,33 +4,65 @@ $('.file-upload').change(function () {
     else $(this).prev().text('Виберіть файл');
 });
 
+let play = true, audio = new Audio(), nameAudio, currentAudioTag;
 
-const audio = new Audio('music.mp3');
+const listAudio = [
+    {
+        name: "audio1",
+        src: "audio/audio1.mp3"
+    },
+    {
+        name: "audio2",
+        src: "audio/audio2.mp3"
+    },
+    {
+        name: "audio3",
+        src: "audio/audio3.mp3"
+    },
+]
 
-let play = true;
+function targetAudio(name){
+    $.each(listAudio, i => {
+        if(listAudio[i].name == name){
+            audio.src = listAudio[i].src;
+        }
+    });
+}
 
-function playPauseAudio() {
+function playPauseAudio(teg) {
+   if ($(teg).attr("data-name") != nameAudio){
+        nameAudio = $(teg).attr("data-name");
+        play = true;
+        $(currentAudioTag).children(".pause").removeClass("d-block");
+        $(currentAudioTag).children(".pause").addClass("d-none");
+        $(currentAudioTag).children(".play").removeClass("d-none");
+        $(currentAudioTag).children(".play").addClass("d-block");
+        targetAudio(nameAudio);
+        currentAudioTag = teg;
+    } 
+   
     if (play === true) {
         audio.play();
         play = false;
-        $("#play").removeClass("d-block");
-        $("#play").addClass("d-none");
-        $("#pause").removeClass("d-none");
-        $("#pause").addClass("d-block");
+        $(teg).children(".play").removeClass("d-block");
+        $(teg).children(".play").addClass("d-none");
+        $(teg).children(".pause").removeClass("d-none");
+        $(teg).children(".pause").addClass("d-block");
     } else {
         audio.pause();
         play = true;
-        $("#pause").removeClass("d-block");
-        $("#pause").addClass("d-none");
-        $("#play").removeClass("d-none");
-        $("#play").addClass("d-block");
+             $(teg).children(".pause").removeClass("d-block");
+             $(teg).children(".pause").addClass("d-none");
+             $(teg).children(".play").removeClass("d-none");
+             $(teg).children(".play").addClass("d-block");
     }
     audio.addEventListener('ended', function () {
         audio.currentTime = 0;
-        $("#pause").removeClass("d-block");
-        $("#pause").addClass("d-none");
-        $("#play").removeClass("d-none");
-        $("#play").addClass("d-block");
+        play = true;
+             $(teg).children(".pause").removeClass("d-block");
+             $(teg).children(".pause").addClass("d-none");
+             $(teg).children(".play").removeClass("d-none");
+             $(teg).children(".play").addClass("d-block");
     }, false);
 }
 

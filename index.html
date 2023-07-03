@@ -603,13 +603,10 @@
                         </div>
                         <div class="user-description user-audio mt-2">
                             <div class="icon">
-                                <a onclick="playPauseAudio()" id="play" class="d-block">
-                                    <img src="bootstrap-icons-1.10.5/play-circle.svg" width="32" height="32">
+                                <a onclick="playPauseAudio(this)" data-name="audio1">
+                                    <img src="bootstrap-icons-1.10.5/play-circle.svg" class="play d-block" width="32" height="32">
+                                    <img src="bootstrap-icons-1.10.5/pause-circle-fill.svg" class="pause d-none" width="32" height="32">
                                 </a>
-                                <a onclick="playPauseAudio()" id="pause" class="d-none">
-                                    <img src="bootstrap-icons-1.10.5/pause-circle-fill.svg" width="32" height="32">
-                                </a>
-
                             </div>
                             <div class="text ms-1">
                                 <div class="title">Підключення безкоштовне</div>
