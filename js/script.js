@@ -4,40 +4,17 @@ $('.file-upload').change(function () {
     else $(this).prev().text('Виберіть файл');
 });
 
-let play = true, audio = new Audio(), nameAudio, currentAudioTag;
-
-const listAudio = [
-    {
-        name: "audio1",
-        src: "audio/audio1.mp3"
-    },
-    {
-        name: "audio2",
-        src: "audio/audio2.mp3"
-    },
-    {
-        name: "audio3",
-        src: "audio/audio3.mp3"
-    },
-]
-
-function targetAudio(name){
-    $.each(listAudio, i => {
-        if(listAudio[i].name == name){
-            audio.src = listAudio[i].src;
-        }
-    });
-}
+let play = true, audio = new Audio(), srcAudio, currentAudioTag;
 
 function playPauseAudio(teg) {
-   if ($(teg).attr("data-name") != nameAudio){
-        nameAudio = $(teg).attr("data-name");
+   if ($(teg).attr("data-src") != srcAudio){
+        srcAudio = $(teg).attr("data-src");
         play = true;
         $(currentAudioTag).children(".pause").removeClass("d-block");
         $(currentAudioTag).children(".pause").addClass("d-none");
         $(currentAudioTag).children(".play").removeClass("d-none");
         $(currentAudioTag).children(".play").addClass("d-block");
-        targetAudio(nameAudio);
+        audio.src = srcAudio;
         currentAudioTag = teg;
     } 
    
@@ -70,9 +47,6 @@ var catalogInTable = [];
 
 $(document).ready(function () {
     newTable(stainless, "#tube");
-    // writeSelect(uniqMark(catalogInTable), "#select-mark", 2);
-    // writeSelect(uniqSize(catalogInTable), "#select-size", 3);
-    // writeTable(catalogInTable);
 })
 
 function uniqMark(sel) {
